@@ -97,7 +97,16 @@ body {
   height: 534px;
   max-height: 100%;
   background-size: cover;
+   transform: scaleY(0);
+  opacity: 0;
 }
+
+.top-content.swiper-slide-active .image{
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.6s ease-in-out;
+}
+
 .image-1 {
   background-image: url("img/desktop-image-hero-1.jpg");
 }
@@ -123,6 +132,14 @@ body {
   font-size: 38px;
   font-weight: 600;
   padding-bottom: 30px;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.top-content.swiper-slide-active .h-text{
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.6s ease-in;
 }
 
 .top-content .p-text {
@@ -132,6 +149,14 @@ body {
   line-height: 24px;
   letter-spacing: 1.2px;
   color: rgb(0, 0, 0, 0.6);
+  transform: translateX(80px);
+  opacity: 0;
+}
+
+.top-content.swiper-slide-active .p-text{
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.6s ease-in;
 }
 
 .shop-link {
@@ -142,13 +167,21 @@ body {
   letter-spacing: 14px;
   cursor: pointer;
   user-select: none;
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+.top-content.swiper-slide-active .shop-link{
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.6s ease-in;
 }
 
 .shop-link img {
   margin-bottom: 1px;
 }
 
-.shop-link:hover {
+.top-content.swiper-slide-active .shop-link:hover {
   opacity: 0.4;
 }
 
